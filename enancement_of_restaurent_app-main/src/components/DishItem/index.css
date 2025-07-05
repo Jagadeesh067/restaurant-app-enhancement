@@ -1,0 +1,266 @@
+/* Dish Item Container */
+.dish-item-container {
+  display: flex;
+  align-items: flex-start;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease;
+}
+
+.dish-item-container:hover {
+  transform: translateY(-5px);
+}
+
+/* Dish Indicator (Veg/Non-Veg) */
+.dish-indicator {
+  margin-right: 15px;
+}
+
+.indicator-border {
+  width: 20px;
+  height: 20px;
+  border: 2px solid;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.veg-border {
+  border-color: #27ae60; /* Matches Login button */
+}
+
+.non-veg-border {
+  border-color: #c0392b; /* Matches Header logout, Login error */
+}
+
+.indicator-round {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.veg-round {
+  background-color: #27ae60;
+}
+
+.non-veg-round {
+  background-color: #c0392b;
+}
+
+/* Dish Details */
+.dish-details-container {
+  flex: 1;
+  margin-right: 15px;
+}
+
+.dish-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 5px;
+  color: #2c3e50; /* Matches Header, Login title */
+}
+
+.dish-currency-price {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #34495e; /* Matches Login label */
+  margin: 0 0 5px;
+}
+
+.dish-description {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin: 0 0 10px;
+  line-height: 1.4;
+}
+
+/* Controller Buttons */
+.controller-container {
+  display: flex;
+  align-items: center;
+  background-color: #27ae60; /* Matches Login button */
+  border-radius: 20px;
+  padding: 5px 10px;
+  width: fit-content;
+}
+
+.controller-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.controller-button:hover {
+  transform: scale(1.2);
+}
+
+.quantity {
+  font-size: 1rem;
+  color: #fff;
+  margin: 0 15px;
+  font-weight: 500;
+}
+
+/* Availability Text */
+.not-availability-text {
+  font-size: 0.9rem;
+  color: #c0392b; /* Matches Header logout, Login error */
+  font-weight: 500;
+  margin: 10px 0 0;
+}
+
+.addon-availability-text {
+  font-size: 0.85rem;
+  color: #2980b9; /* Matches earlier DishItem */
+  font-weight: 500;
+  margin: 5px 0 0;
+}
+
+/* Add to Cart Button */
+.add-to-cart-button {
+  background-color: transparent;
+  border: 1px solid #27ae60; /* Matches controller */
+  color: #27ae60;
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.add-to-cart-button:hover {
+  background-color: #27ae60;
+  color: #fff;
+}
+
+/* Dish Meta (Calories and Image) */
+.dish-meta-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.dish-calories {
+  font-size: 0.85rem;
+  color: #f1c40f; /* Matches Header hover, Home active tab */
+  font-weight: 500;
+  margin: 0;
+}
+
+.dish-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .dish-item-container {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px;
+  }
+
+  .dish-indicator {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .dish-details-container {
+    margin-right: 0;
+  }
+
+  .dish-meta-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .dish-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .dish-name {
+    font-size: 1.1rem;
+  }
+
+  .dish-currency-price {
+    font-size: 0.95rem;
+  }
+
+  .dish-description {
+    font-size: 0.85rem;
+  }
+
+  .add-to-cart-button {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dish-item-container {
+    padding: 8px;
+  }
+
+  .dish-name {
+    font-size: 1rem;
+  }
+
+  .dish-currency-price {
+    font-size: 0.9rem;
+  }
+
+  .dish-description {
+    font-size: 0.8rem;
+  }
+
+  .controller-container {
+    padding: 4px 8px;
+  }
+
+  .controller-button {
+    font-size: 1rem;
+    padding: 0 8px;
+  }
+
+  .quantity {
+    margin: 0 10px;
+  }
+
+  .dish-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .dish-calories {
+    font-size: 0.8rem;
+  }
+
+  .not-availability-text {
+    font-size: 0.85rem;
+  }
+
+  .addon-availability-text {
+    font-size: 0.8rem;
+  }
+
+  .add-to-cart-button {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+}

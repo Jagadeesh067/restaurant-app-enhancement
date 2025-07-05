@@ -1,0 +1,187 @@
+/* Header */
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #2c3e50; /* Matches Login, Home, DishItem */
+  color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+  letter-spacing: 1px;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #f1c40f; /* Matches Home active tab */
+}
+
+/* Navigation Items */
+.nav-items {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Orders Text */
+.orders-text {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.orders-text:hover {
+  color: #f1c40f;
+}
+
+/* Logout Button */
+.logout-button {
+  background-color: transparent;
+  border: 1px solid #c0392b; /* Matches DishItem non-veg */
+  color: #c0392b;
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #c0392b;
+  color: #fff;
+}
+
+/* Cart Container */
+.cart-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Cart Button */
+.cart-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Cart Icon */
+.cart-icon {
+  font-size: 1.8rem;
+  color: #fff;
+  transition: transform 0.2s ease;
+}
+
+.cart-button:hover .cart-icon {
+  transform: scale(1.1);
+}
+
+/* Cart Count Badge */
+.cart-count-badge {
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  background-color: #c0392b; /* Matches DishItem non-veg */
+  color: #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/* Cart Count */
+.cart-count {
+  margin: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 20px;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .nav-items {
+    gap: 15px;
+  }
+
+  .orders-text {
+    font-size: 0.9rem;
+  }
+
+  .logout-button {
+    font-size: 0.85rem;
+    padding: 5px 10px;
+  }
+
+  .cart-icon {
+    font-size: 1.6rem;
+  }
+
+  .cart-count-badge {
+    width: 18px;
+    height: 18px;
+    font-size: 0.7rem;
+    top: -6px;
+    right: -10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-header {
+    padding: 10px 15px;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .nav-items {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .orders-text {
+    font-size: 0.85rem;
+  }
+
+  .logout-button {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+  }
+
+  .cart-icon {
+    font-size: 1.4rem;
+  }
+
+  .cart-count-badge {
+    width: 16px;
+    height: 16px;
+    font-size: 0.65rem;
+    top: -5px;
+    right: -8px;
+  }
+}

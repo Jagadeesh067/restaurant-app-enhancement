@@ -1,0 +1,112 @@
+/* Main cart container */
+
+/* Cart content area */
+.cart-content {
+  flex: 1;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* Empty cart view */
+.empty-cart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+}
+
+.empty-cart-image {
+  max-width: 300px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.empty-cart-text {
+  font-size: 24px;
+  color: #2c3e50; /* Primary color */
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.go-back-button {
+  background-color: #27ae60; /* Accent color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.go-back-button:hover {
+  background-color: #219653; /* Darker green on hover */
+}
+
+/* Cart items header */
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cart-title {
+  font-size: 28px;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.remove-all-button {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.remove-all-button:hover {
+  background-color: #219653;
+}
+
+/* Cart items list */
+.cart-items-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .cart-content {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .empty-cart-image {
+    max-width: 200px;
+  }
+
+  .empty-cart-text {
+    font-size: 20px;
+  }
+
+  .go-back-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .cart-title {
+    font-size: 24px;
+  }
+
+  .remove-all-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
