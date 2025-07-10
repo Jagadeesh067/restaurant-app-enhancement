@@ -4,8 +4,8 @@ import {Redirect} from 'react-router-dom'
 import './index.css'
 
 const Login = props => {
-  const [username, setUsername] = useState('')
-  const [password, setPassword] = useState('')
+  const [username, setUsername] = useState('rahul')
+  const [password, setPassword] = useState('rahul@2021')
   const [errorMsg, setErrorMsg] = useState('')
 
   const onChangeHandler = event => {
